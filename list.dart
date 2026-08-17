@@ -51,7 +51,7 @@ void main(){
     print("List :${value[i]}");
   }
 }
-*/
+
 void main(){
   List Number = [10,15,30,40,50,60];
   int sum = 0;
@@ -67,4 +67,34 @@ void main(){
   }
   print("Enter the summation of sum :$sum");
   print(CountEvenNumbr);
+}
+
+*/
+
+List name =[
+  {
+    "id":"802209",
+    "Name":"Mahamdul Hasan",
+    "institute":"DPI",
+    "dept":"CST",
+    
+  },
+  {
+    "id":"802210",
+    "Name":"Mahamdul Hasan",
+    "institute":"DPI",
+    "dept":"CST",
+    
+  },
+  {
+    "id":"802211",
+    "Name":"Mahamdul Hasan",
+    "institute":"DPI",
+    "dept":"CST",
+    
+  }
+];
+
+void main(){
+  print("Enter the list :${name[0]['id']}");
 }
