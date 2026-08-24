@@ -22,7 +22,7 @@
 
 
 
-import '../list.dart';
+
 import 'dummy_json.dart';
 import 'model.dart';
 

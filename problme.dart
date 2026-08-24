@@ -167,4 +167,106 @@ void main(){
   }
 }
 
+
+// problme 01
+import 'dart:async';
+
+Future<void> getStudentData()async{
+  print("loading data ...");
+  await Future.delayed(Duration(seconds: 2));
+  print("Student data loaded");
+}
+
+void main()async{
+  
+  await getStudentData();
+  print("final Data");
+}
+
+problme 02
+
+Future<String>fetchUserName()async{
+  await Future.delayed(Duration(seconds: 2));
+  String name = "Mahamudul Hasan";
+
+  return name;
+}
+
+void main()async{
+ var n = await fetchUserName();
+ print(n);
+ print("id : 122131");
+
+}
+
+
+// problem 03
+Future<String> fetchUserName()async{
+  await Future.delayed(Duration(seconds: 2));
+  String name = "Mahamdul Hasan";
+  return name;
+}
+
+Future<int> fetchUserAge()async{
+  await Future.delayed(Duration(seconds: 1));
+  int age = 19;
+  return age;
+
+}
+
+Future<String> fetchUserEmail()async{
+  await Future.delayed(Duration(seconds: 3));
+  String email = "mahamudulhasan459@gmail.com";
+  return email;
+}
+
+void main()async{
+  print("Fetching user data ....");
+  var n = await fetchUserName();
+  print("User Name :$n");
+  var a = await fetchUserAge();
+  print("Age :$a");
+  var e = await fetchUserEmail();
+  print("Email :$e");
+}
+
 */
+
+
+
+Future<String> fetchUserName()async{
+  await Future.delayed(Duration(seconds: 2));
+  String name = "Mahamdul Hasan";
+  return name;
+}
+
+Future<int> fetchUserAge()async{
+  await Future.delayed(Duration(seconds: 1));
+  int age = 19;
+  return age;
+
+}
+
+Future<String> fetchUserEmail()async {
+  await Future.delayed(Duration(seconds: 3));
+  // String email = "mahamudulhasan459@gmail.com";
+  String email ='mahamudulhasan@gmail.com';
+  // throw Exception("Email Server not found");
+  return email;
+}
+void main()async{
+  
+ try{
+  final result = await Future.wait([
+    fetchUserName(),
+    fetchUserAge(),
+    fetchUserEmail(),
+  ]).timeout(Duration(seconds: 3));
+  print(result[0]);
+  print(result[1]);
+  print(result[2]);
+ }catch(e) {
+  print("Email Srver not found");
+ }
+
+}

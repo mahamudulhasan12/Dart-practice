@@ -55,6 +55,7 @@ class StudentModel{
     roll = json['roll'];
     department = json['department'];
     institution = json['institution'];
+    email = json['email'];
   }
 
   Map<String , dynamic> tojson(){
@@ -64,6 +65,7 @@ class StudentModel{
     data['roll'] = this.roll;
     data['department'] = this.department;
     data['institution'] = this.institution;
+    data['email'] = this.email;
     return data;
   }
 }
