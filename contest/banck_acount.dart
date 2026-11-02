@@ -30,7 +30,7 @@ class BankAccount{
   }
 
   void checkBlance(){
-    print("Enter Your account blance ;$balance");
+    print("Enter Your account blance :$balance");
   }
 
 }
