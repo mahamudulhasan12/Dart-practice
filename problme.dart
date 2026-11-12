@@ -230,7 +230,7 @@ void main()async{
   print("Email :$e");
 }
 
-*/
+
 
 
 
@@ -269,4 +269,68 @@ void main()async{
   print("Email Srver not found");
  }
 
+}
+
+*/
+
+// simple student management system
+
+void main() {
+  List<String> subjects = ["Bangla", "English", "Math", "Science", "ICT"];
+  List<int> marks = [50, 60, 70, 75, 90];
+
+  print("Student Result");
+  int sum = 0;
+  double? avrage;
+  double? percentaget;
+  String? grade;
+
+
+  bool isPass = true;
+
+
+  for (int i = 0; i < marks.length; i++) {
+    print("${subjects[i]} :${marks[i]}");
+    sum = sum + marks[i];
+    avrage = sum / i;
+    percentaget = (sum * 100) / 500;
+
+    if (avrage > 80) {
+      grade = "A+";
+    } else if (avrage > 70) {
+      grade = "A";
+    } else if (avrage > 60) {
+      grade = "B";
+    } else if (avrage >= 50) {
+      grade = 'B';
+    } else if (avrage >= 40) {
+      grade = 'C';
+    } else if (avrage >= 33) {
+      grade = 'D';
+    } else {
+      grade = 'F';
+    }
+  }
+
+  print("\nTotal Marks : $sum");
+  print("\nAverage Marks :$avrage");
+  print("Percentaget :${percentaget} %");
+
+  print("Grade :$grade");
+
+
+  // pass or fall condition
+
+  for(int mark in marks){
+    if(mark < 33){
+      isPass = false;
+      break;
+    }
+  }
+  if(isPass){
+    print("Result : Pass");
+  
+  }else{
+    print("Result : Fail");
+  }
 }
